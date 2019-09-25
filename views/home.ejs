@@ -1,0 +1,21 @@
+<%-include("partials/header")-%>
+<h1>Home</h1>
+<p><%=homeContent1%></p>
+<a href="/compose"> <button type="submit" class="btn btn-primary" name="button">Compose</button></a>
+
+
+<%posts.forEach((element)=>{%>
+    <div class="title">
+    <h1 class="h1"><span><i class="fa fa-trash"></i></span><%=element.title%></h1>
+    <p>
+    <%=element.content.substring(0, 75) + "..."%>
+    <a href="/posts/<%=element.title%>">Read More</a>
+    </p>
+    <hr>
+
+</div>
+
+<%})%>
+
+
+<%-include("partials/footer")-%>

@@ -1,0 +1,28 @@
+
+</div>
+<div class="footer-padding">
+  <div class="footer">
+    <p>Made by The RdbM</p>
+  </div>
+</div>
+
+<script>
+  // to delete a title
+  $('.title').on('click', 'span', function (event) {
+    $(this).parentsUntil(".container").fadeOut(500, function () {
+      $(this).remove();
+    });
+    event.stopPropagation();
+  });
+  // to mark it for understanding that it was read
+  $('.title').on('click', 'h1', function () {
+    $(this).toggleClass('completed');
+  });
+</script>
+</body>
+
+</html>
+
+<!-- in 9. line 
+which key you want to be deleted when you press you have write
+'span' or 'p' or 'h1'  -->
